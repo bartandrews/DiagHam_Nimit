@@ -1,0 +1,4 @@
+AbstractDMRGAlgorithm.o: AbstractDMRGAlgorithm.cc \
+  ../../src/DMRGAlgorithm/AbstractDMRGAlgorithm.h
+
+../../src/DMRGAlgorithm/AbstractDMRGAlgorithm.h:

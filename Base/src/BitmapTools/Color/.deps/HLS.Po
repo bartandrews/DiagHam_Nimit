@@ -1,0 +1,11 @@
+HLS.o: HLS.cc ../../../../Base/src/BitmapTools/Color/HLS.h \
+  ../../../../src/config.h ../../../../src/config_ac.h \
+  ../../../../Base/src/BitmapTools/Color/RGB.h
+
+../../../../Base/src/BitmapTools/Color/HLS.h:
+
+../../../../src/config.h:
+
+../../../../src/config_ac.h:
+
+../../../../Base/src/BitmapTools/Color/RGB.h:

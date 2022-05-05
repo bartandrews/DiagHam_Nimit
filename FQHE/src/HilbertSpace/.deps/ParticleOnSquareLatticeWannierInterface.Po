@@ -1,0 +1,10 @@
+ParticleOnSquareLatticeWannierInterface.o: \
+  ParticleOnSquareLatticeWannierInterface.cc \
+  ../../../FQHE/src/HilbertSpace/ParticleOnSquareLatticeWannierInterface.h \
+  ../../../src/config.h ../../../src/config_ac.h
+
+../../../FQHE/src/HilbertSpace/ParticleOnSquareLatticeWannierInterface.h:
+
+../../../src/config.h:
+
+../../../src/config_ac.h:

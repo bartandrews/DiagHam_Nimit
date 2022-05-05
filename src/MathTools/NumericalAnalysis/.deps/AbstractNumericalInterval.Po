@@ -1,0 +1,9 @@
+AbstractNumericalInterval.o: AbstractNumericalInterval.cc \
+  ../../../src/config.h ../../../src/config_ac.h \
+  ../../../src/MathTools/NumericalAnalysis/AbstractNumericalInterval.h
+
+../../../src/config.h:
+
+../../../src/config_ac.h:
+
+../../../src/MathTools/NumericalAnalysis/AbstractNumericalInterval.h:

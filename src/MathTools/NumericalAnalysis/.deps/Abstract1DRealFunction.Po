@@ -1,0 +1,9 @@
+Abstract1DRealFunction.o: Abstract1DRealFunction.cc ../../../src/config.h \
+  ../../../src/config_ac.h \
+  ../../../src/MathTools/NumericalAnalysis/Abstract1DRealFunction.h
+
+../../../src/config.h:
+
+../../../src/config_ac.h:
+
+../../../src/MathTools/NumericalAnalysis/Abstract1DRealFunction.h:

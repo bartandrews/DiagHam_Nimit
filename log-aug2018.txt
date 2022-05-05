@@ -1,0 +1,1388 @@
+Making all in Base
+Making all in src
+Making all in BitmapTools
+Making all in BitmapPicture
+make[5]: Nothing to be done for `all-am'.
+Making all in Color
+make[5]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+make[3]: Nothing to be done for `all-am'.
+make[2]: Nothing to be done for `all-am'.
+Making all in src
+/Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
+Making all in Architecture
+Making all in ArchitectureOperation
+make[5]: Nothing to be done for `all-am'.
+Making all in ClusterArchitecture
+make[5]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+Making all in DMRGAlgorithm
+make[4]: Nothing to be done for `all-am'.
+Making all in GeneralTools
+make[4]: Nothing to be done for `all-am'.
+Making all in Hamiltonian
+Making all in DMRGHamiltonian
+make[5]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+Making all in HilbertSpace
+Making all in DMRGHilbertSpace
+make[5]: Nothing to be done for `all-am'.
+Making all in ManyBodyHilbertSpace
+make[5]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+Making all in Interaction
+Making all in InternalInteraction
+make[5]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+Making all in LanczosAlgorithm
+make[4]: Nothing to be done for `all-am'.
+Making all in Matrix
+make[4]: Nothing to be done for `all-am'.
+Making all in Output
+g++-mp-6 -DHAVE_CONFIG_H -I. -I../../src  -I../../src -I../../Base/src -I../../FQHE/src -I../../FTI/src   -O3 -Wall -I/opt/local/include -I/opt/local/Library/Frameworks/Python.framework/Headers -I/usr/include -MT AbstractOutput.o -MD -MP -MF .deps/AbstractOutput.Tpo -c -o AbstractOutput.o AbstractOutput.cc
+g++-mp-6 -DHAVE_CONFIG_H -I. -I../../src  -I../../src -I../../Base/src -I../../FQHE/src -I../../FTI/src   -O3 -Wall -I/opt/local/include -I/opt/local/Library/Frameworks/Python.framework/Headers -I/usr/include -MT MathematicaOutput.o -MD -MP -MF .deps/MathematicaOutput.Tpo -c -o MathematicaOutput.o MathematicaOutput.cc
+MathematicaOutput.cc: In function 'MathematicaOutput& operator<<(MathematicaOutput&, std::ostream&)':
+MathematicaOutput.cc:128:14: error: no match for 'operator<<' (operand types are 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' and 'std::ostream {aka std::basic_ostream<char>}')
+     Out.File << Str;
+     ~~~~~~~~~^~~~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::basic_ostream<char>] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+MathematicaOutput.cc:128:9: error: cannot bind 'std::basic_ostream<char>' lvalue to 'std::basic_ostream<char>&&'
+     Out.File << Str;
+     ~~~~^~~~
+MathematicaOutput.cc:128:14: note: candidate: operator<<(int, int) <built-in>
+     Out.File << Str;
+     ~~~~~~~~~^~~~~~
+MathematicaOutput.cc:128:14: note:   no known conversion for argument 2 from 'std::ostream {aka std::basic_ostream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:108:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}'
+/opt/local/include/gcc6/c++/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:117:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}'
+/opt/local/include/gcc6/c++/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:127:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::ios_base& (*)(std::ios_base&)'
+/opt/local/include/gcc6/c++/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:166:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long int'
+/opt/local/include/gcc6/c++/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:170:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long unsigned int'
+/opt/local/include/gcc6/c++/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:174:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'bool'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'short int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:181:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'short unsigned int'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:192:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'unsigned int'
+/opt/local/include/gcc6/c++/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:201:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long long int'
+/opt/local/include/gcc6/c++/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:205:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long long unsigned int'
+/opt/local/include/gcc6/c++/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:220:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'double'
+/opt/local/include/gcc6/c++/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:224:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'float'
+/opt/local/include/gcc6/c++/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:232:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long double'
+/opt/local/include/gcc6/c++/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:245:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'const void*'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}'
+MathematicaOutput.cc:126:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, std::ostream&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, ostream& Str)
+                    ^~~~~~~~
+MathematicaOutput.cc:126:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:114:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const long double&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const long double& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:114:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:102:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const double&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const double& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:102:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:90:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const long int&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const long& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:90:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:78:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const int&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const int& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:78:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:66:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const char&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const char& c)
+                    ^~~~~~~~
+MathematicaOutput.cc:66:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:54:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const char*)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const char* c)
+                    ^~~~~~~~
+MathematicaOutput.cc:54:20: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:574:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const unsigned char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:569:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const signed char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:556:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:539:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   mismatched types 'const _CharT*' and 'std::basic_ostream<char>'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:519:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'unsigned char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:514:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'signed char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:508:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:502:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:497:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::basic_ostream<char>')
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/bits/ios_base.h:46:0,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/system_error:209:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const std::error_code&'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/string:52:0,
+                 from /opt/local/include/gcc6/c++/bits/locale_classes.h:40,
+                 from /opt/local/include/gcc6/c++/bits/ios_base.h:41,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:128:17: note:   'std::ostream {aka std::basic_ostream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+     Out.File << Str;
+                 ^~~
+MathematicaOutput.cc: In function 'std::ostream& operator<<(std::ostream&, MathematicaOutput&)':
+MathematicaOutput.cc:140:9: error: no match for 'operator<<' (operand types are 'std::ostream {aka std::basic_ostream<char>}' and 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}')
+     Str << Out.File;
+     ~~~~^~~~~~~~~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::__cxx11::basic_stringstream<char>] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+MathematicaOutput.cc:140:5: error: cannot bind 'std::ostream {aka std::basic_ostream<char>}' lvalue to 'std::basic_ostream<char>&&'
+     Str << Out.File;
+     ^~~
+MathematicaOutput.cc:140:9: note: candidate: operator<<(int, int) <built-in>
+     Str << Out.File;
+     ~~~~^~~~~~~~~~~
+MathematicaOutput.cc:140:9: note:   no known conversion for argument 2 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:108:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}'
+/opt/local/include/gcc6/c++/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:117:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}'
+/opt/local/include/gcc6/c++/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:127:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::ios_base& (*)(std::ios_base&)'
+/opt/local/include/gcc6/c++/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:166:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long int'
+/opt/local/include/gcc6/c++/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:170:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long unsigned int'
+/opt/local/include/gcc6/c++/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:174:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'bool'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:181:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short unsigned int'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:192:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'unsigned int'
+/opt/local/include/gcc6/c++/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:201:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long int'
+/opt/local/include/gcc6/c++/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:205:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long unsigned int'
+/opt/local/include/gcc6/c++/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:220:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'double'
+/opt/local/include/gcc6/c++/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:224:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'float'
+/opt/local/include/gcc6/c++/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:232:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long double'
+/opt/local/include/gcc6/c++/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:245:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'const void*'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}'
+MathematicaOutput.cc:138:10: note: candidate: std::ostream& operator<<(std::ostream&, MathematicaOutput&)
+ ostream& operator << (ostream& Str, MathematicaOutput& Out)
+          ^~~~~~~~
+MathematicaOutput.cc:138:10: note:   no known conversion for argument 2 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:126:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, std::ostream&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, ostream& Str)
+                    ^~~~~~~~
+MathematicaOutput.cc:126:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:114:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const long double&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const long double& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:114:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:102:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const double&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const double& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:102:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:90:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const long int&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const long& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:90:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:78:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const int&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const int& x)
+                    ^~~~~~~~
+MathematicaOutput.cc:78:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:66:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const char&)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const char& c)
+                    ^~~~~~~~
+MathematicaOutput.cc:66:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+MathematicaOutput.cc:54:20: note: candidate: MathematicaOutput& operator<<(MathematicaOutput&, const char*)
+ MathematicaOutput& operator << (MathematicaOutput& Out, const char* c)
+                    ^~~~~~~~
+MathematicaOutput.cc:54:20: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'MathematicaOutput&'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:574:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const unsigned char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:569:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const signed char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:556:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:539:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   mismatched types 'const _CharT*' and 'std::__cxx11::basic_stringstream<char>'
+     Str << Out.File;
+                ^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:519:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'unsigned char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:514:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'signed char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:508:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:502:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:497:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::__cxx11::basic_stringstream<char>')
+     Str << Out.File;
+                ^~~~
+In file included from /opt/local/include/gcc6/c++/bits/ios_base.h:46:0,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/system_error:209:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   cannot convert '(& Out)->MathematicaOutput::<anonymous>.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const std::error_code&'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/string:52:0,
+                 from /opt/local/include/gcc6/c++/bits/locale_classes.h:40,
+                 from /opt/local/include/gcc6/c++/bits/ios_base.h:41,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from ../../src/Output/MathematicaOutput.h:35,
+                 from MathematicaOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+MathematicaOutput.cc:140:16: note:   'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+     Str << Out.File;
+                ^~~~
+AbstractOutput.cc: In member function 'virtual bool AbstractOutput::Save(char*)':
+AbstractOutput.cc:66:14: error: no match for 'operator<<' (operand types are 'std::ofstream {aka std::basic_ofstream<char>}' and 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}')
+     RealFile << this->File;
+     ~~~~~~~~~^~~~~~~~~~~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::__cxx11::basic_stringstream<char>] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+AbstractOutput.cc:66:23: error: cannot bind 'std::basic_ostream<char>' lvalue to 'std::basic_ostream<char>&&'
+     RealFile << this->File;
+                       ^~~~
+AbstractOutput.cc:66:14: note: candidate: operator<<(int, int) <built-in>
+     RealFile << this->File;
+     ~~~~~~~~~^~~~~~~~~~~~~
+AbstractOutput.cc:66:14: note:   no known conversion for argument 2 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:108:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}'
+/opt/local/include/gcc6/c++/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:117:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}'
+/opt/local/include/gcc6/c++/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:127:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::ios_base& (*)(std::ios_base&)'
+/opt/local/include/gcc6/c++/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:166:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long int'
+/opt/local/include/gcc6/c++/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:170:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long unsigned int'
+/opt/local/include/gcc6/c++/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:174:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'bool'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:181:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short unsigned int'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:192:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'unsigned int'
+/opt/local/include/gcc6/c++/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:201:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long int'
+/opt/local/include/gcc6/c++/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:205:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long unsigned int'
+/opt/local/include/gcc6/c++/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:220:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'double'
+/opt/local/include/gcc6/c++/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:224:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'float'
+/opt/local/include/gcc6/c++/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:232:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long double'
+/opt/local/include/gcc6/c++/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:245:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'const void*'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:574:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const unsigned char*'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:569:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const signed char*'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:556:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:539:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   mismatched types 'const _CharT*' and 'std::__cxx11::basic_stringstream<char>'
+     RealFile << this->File;
+                       ^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:519:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'unsigned char'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:514:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'signed char'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:508:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:502:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:497:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::__cxx11::basic_stringstream<char>')
+     RealFile << this->File;
+                       ^~~~
+In file included from /opt/local/include/gcc6/c++/bits/ios_base.h:46:0,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/system_error:209:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   cannot convert '((AbstractOutput*)this)->AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const std::error_code&'
+     RealFile << this->File;
+                 ~~~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/string:52:0,
+                 from /opt/local/include/gcc6/c++/bits/locale_classes.h:40,
+                 from /opt/local/include/gcc6/c++/bits/ios_base.h:41,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:66:23: note:   'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+     RealFile << this->File;
+                       ^~~~
+AbstractOutput.cc: In function 'AbstractOutput& operator<<(AbstractOutput&, std::ostream&)':
+AbstractOutput.cc:166:14: error: no match for 'operator<<' (operand types are 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' and 'std::ostream {aka std::basic_ostream<char>}')
+     Out.File << Str;
+     ~~~~~~~~~^~~~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::basic_ostream<char>] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+AbstractOutput.cc:166:9: error: cannot bind 'std::basic_ostream<char>' lvalue to 'std::basic_ostream<char>&&'
+     Out.File << Str;
+     ~~~~^~~~
+AbstractOutput.cc:166:14: note: candidate: operator<<(int, int) <built-in>
+     Out.File << Str;
+     ~~~~~~~~~^~~~~~
+AbstractOutput.cc:166:14: note:   no known conversion for argument 2 from 'std::ostream {aka std::basic_ostream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:108:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}'
+/opt/local/include/gcc6/c++/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:117:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}'
+/opt/local/include/gcc6/c++/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:127:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::ios_base& (*)(std::ios_base&)'
+/opt/local/include/gcc6/c++/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:166:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long int'
+/opt/local/include/gcc6/c++/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:170:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long unsigned int'
+/opt/local/include/gcc6/c++/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:174:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'bool'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'short int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:181:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'short unsigned int'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:192:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'unsigned int'
+/opt/local/include/gcc6/c++/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:201:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long long int'
+/opt/local/include/gcc6/c++/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:205:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long long unsigned int'
+/opt/local/include/gcc6/c++/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:220:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'double'
+/opt/local/include/gcc6/c++/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:224:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'float'
+/opt/local/include/gcc6/c++/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:232:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'long double'
+/opt/local/include/gcc6/c++/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:245:7: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'const void*'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}'
+AbstractOutput.cc:164:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, std::ostream&)
+ AbstractOutput& operator << (AbstractOutput& Out, ostream& Str)
+                 ^~~~~~~~
+AbstractOutput.cc:164:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:152:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const long double&)
+ AbstractOutput& operator << (AbstractOutput& Out, const long double& x)
+                 ^~~~~~~~
+AbstractOutput.cc:152:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:140:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const double&)
+ AbstractOutput& operator << (AbstractOutput& Out, const double& x)
+                 ^~~~~~~~
+AbstractOutput.cc:140:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:128:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const long int&)
+ AbstractOutput& operator << (AbstractOutput& Out, const long& x)
+                 ^~~~~~~~
+AbstractOutput.cc:128:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:116:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const int&)
+ AbstractOutput& operator << (AbstractOutput& Out, const int& x)
+                 ^~~~~~~~
+AbstractOutput.cc:116:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:104:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const char&)
+ AbstractOutput& operator << (AbstractOutput& Out, const char& c)
+                 ^~~~~~~~
+AbstractOutput.cc:104:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:92:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const char*)
+ AbstractOutput& operator << (AbstractOutput& Out, const char* c)
+                 ^~~~~~~~
+AbstractOutput.cc:92:17: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:574:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const unsigned char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:569:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const signed char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:556:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const char*'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:539:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   mismatched types 'const _CharT*' and 'std::basic_ostream<char>'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:519:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'unsigned char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:514:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'signed char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:508:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:502:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'char'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:497:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::basic_ostream<char>')
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/bits/ios_base.h:46:0,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/system_error:209:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   cannot convert 'Str' (type 'std::ostream {aka std::basic_ostream<char>}') to type 'const std::error_code&'
+     Out.File << Str;
+                 ^~~
+In file included from /opt/local/include/gcc6/c++/string:52:0,
+                 from /opt/local/include/gcc6/c++/bits/locale_classes.h:40,
+                 from /opt/local/include/gcc6/c++/bits/ios_base.h:41,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:166:17: note:   'std::ostream {aka std::basic_ostream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+     Out.File << Str;
+                 ^~~
+AbstractOutput.cc: In function 'std::ostream& operator<<(std::ostream&, AbstractOutput&)':
+AbstractOutput.cc:179:9: error: no match for 'operator<<' (operand types are 'std::ostream {aka std::basic_ostream<char>}' and 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}')
+     Str << Out.File;
+     ~~~~^~~~~~~~~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:628:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = std::__cxx11::basic_stringstream<char>] <near match>
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:628:5: note:   conversion of argument 1 would be ill-formed:
+AbstractOutput.cc:179:5: error: cannot bind 'std::ostream {aka std::basic_ostream<char>}' lvalue to 'std::basic_ostream<char>&&'
+     Str << Out.File;
+     ^~~
+AbstractOutput.cc:179:9: note: candidate: operator<<(int, int) <built-in>
+     Str << Out.File;
+     ~~~~^~~~~~~~~~~
+AbstractOutput.cc:179:9: note:   no known conversion for argument 2 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:108:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}'
+/opt/local/include/gcc6/c++/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:117:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}'
+/opt/local/include/gcc6/c++/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:127:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::ios_base& (*)(std::ios_base&)'
+/opt/local/include/gcc6/c++/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:166:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long int'
+/opt/local/include/gcc6/c++/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:170:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long unsigned int'
+/opt/local/include/gcc6/c++/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:174:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'bool'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:181:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'short unsigned int'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'int'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:192:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'unsigned int'
+/opt/local/include/gcc6/c++/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:201:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long int'
+/opt/local/include/gcc6/c++/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:205:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long long unsigned int'
+/opt/local/include/gcc6/c++/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:220:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'double'
+/opt/local/include/gcc6/c++/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:224:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'float'
+/opt/local/include/gcc6/c++/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:232:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'long double'
+/opt/local/include/gcc6/c++/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:245:7: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'const void*'
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}'
+AbstractOutput.cc:176:10: note: candidate: std::ostream& operator<<(std::ostream&, AbstractOutput&)
+ ostream& operator << (ostream& Str, AbstractOutput& Out)
+          ^~~~~~~~
+AbstractOutput.cc:176:10: note:   no known conversion for argument 2 from 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:164:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, std::ostream&)
+ AbstractOutput& operator << (AbstractOutput& Out, ostream& Str)
+                 ^~~~~~~~
+AbstractOutput.cc:164:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:152:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const long double&)
+ AbstractOutput& operator << (AbstractOutput& Out, const long double& x)
+                 ^~~~~~~~
+AbstractOutput.cc:152:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:140:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const double&)
+ AbstractOutput& operator << (AbstractOutput& Out, const double& x)
+                 ^~~~~~~~
+AbstractOutput.cc:140:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:128:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const long int&)
+ AbstractOutput& operator << (AbstractOutput& Out, const long& x)
+                 ^~~~~~~~
+AbstractOutput.cc:128:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:116:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const int&)
+ AbstractOutput& operator << (AbstractOutput& Out, const int& x)
+                 ^~~~~~~~
+AbstractOutput.cc:116:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:104:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const char&)
+ AbstractOutput& operator << (AbstractOutput& Out, const char& c)
+                 ^~~~~~~~
+AbstractOutput.cc:104:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+AbstractOutput.cc:92:17: note: candidate: AbstractOutput& operator<<(AbstractOutput&, const char*)
+ AbstractOutput& operator << (AbstractOutput& Out, const char* c)
+                 ^~~~~~~~
+AbstractOutput.cc:92:17: note:   no known conversion for argument 1 from 'std::ostream {aka std::basic_ostream<char>}' to 'AbstractOutput&'
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:574:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const unsigned char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:569:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const signed char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:556:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/ostream:638:0,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const char*'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:539:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   mismatched types 'const _CharT*' and 'std::__cxx11::basic_stringstream<char>'
+     Str << Out.File;
+                ^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:519:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'unsigned char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:514:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'signed char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:508:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:502:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'char'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/iostream:39:0,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/ostream:497:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::__cxx11::basic_stringstream<char>')
+     Str << Out.File;
+                ^~~~
+In file included from /opt/local/include/gcc6/c++/bits/ios_base.h:46:0,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/system_error:209:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/system_error:209:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   cannot convert 'Out.AbstractOutput::File' (type 'std::stringstream {aka std::__cxx11::basic_stringstream<char>}') to type 'const std::error_code&'
+     Str << Out.File;
+            ~~~~^~~~
+In file included from /opt/local/include/gcc6/c++/string:52:0,
+                 from /opt/local/include/gcc6/c++/bits/locale_classes.h:40,
+                 from /opt/local/include/gcc6/c++/bits/ios_base.h:41,
+                 from /opt/local/include/gcc6/c++/ios:42,
+                 from /opt/local/include/gcc6/c++/ostream:38,
+                 from /opt/local/include/gcc6/c++/iostream:39,
+                 from ../../src/Output/AbstractOutput.h:37,
+                 from AbstractOutput.cc:31:
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/opt/local/include/gcc6/c++/bits/basic_string.h:5340:5: note:   template argument deduction/substitution failed:
+AbstractOutput.cc:179:16: note:   'std::stringstream {aka std::__cxx11::basic_stringstream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+     Str << Out.File;
+                ^~~~
+make[4]: *** [MathematicaOutput.o] Error 1
+make[4]: *** Waiting for unfinished jobs....
+make[4]: *** [AbstractOutput.o] Error 1
+make[3]: *** [all-recursive] Error 1
+make[2]: *** [all-recursive] Error 1
+make[1]: *** [all] Error 2
+make: *** [all-recursive] Error 1

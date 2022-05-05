@@ -1,0 +1,9 @@
+AbstractParticleCollection.o: AbstractParticleCollection.cc \
+  AbstractParticleCollection.h ../../../../src/config.h \
+  ../../../../src/config_ac.h
+
+AbstractParticleCollection.h:
+
+../../../../src/config.h:
+
+../../../../src/config_ac.h:

@@ -1,0 +1,4 @@
+IntegerAlgebraTools.o: IntegerAlgebraTools.cc \
+  ../../src/MathTools/IntegerAlgebraTools.h
+
+../../src/MathTools/IntegerAlgebraTools.h:

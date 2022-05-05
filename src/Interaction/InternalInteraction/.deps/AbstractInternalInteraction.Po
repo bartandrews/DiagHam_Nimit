@@ -1,0 +1,15 @@
+AbstractInternalInteraction.o: AbstractInternalInteraction.cc \
+  ../../../src/config.h ../../../src/config_ac.h \
+  ../../../src/Interaction/InternalInteraction/AbstractInternalInteraction.h \
+  ../../../src/GeneralTools/List.h \
+  ../../../src/GeneralTools/ListElement.h
+
+../../../src/config.h:
+
+../../../src/config_ac.h:
+
+../../../src/Interaction/InternalInteraction/AbstractInternalInteraction.h:
+
+../../../src/GeneralTools/List.h:
+
+../../../src/GeneralTools/ListElement.h:
